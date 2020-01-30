@@ -22,7 +22,7 @@ You will need:
    1. Create database with name: ```employeeAttendance```
    2. Open ```empAttendance.sql``` file in the query tool of the database
    3. Edit ```application.properties``` file by setting the database name host and username
-   4. Add database password to project configuration
+   4. Add ```SPRING_DATASOURCE_PASSWORD=<password>``` at the environment variables in the project configuration
 3. After everything is set up open the project with your IDE, install the dependencies and 
 run the application.
 
@@ -38,7 +38,7 @@ run the application.
                                                    Needs json body for login.
     Response is just the hours worked by all employees.
     
-* URL: http://localhost:8080/admin/signup METHOD = POST
+* URL: ```http://localhost:8080/admin/signup``` METHOD = POST
                                            Needs json body for sign up.
     Response is the new registered admin
     

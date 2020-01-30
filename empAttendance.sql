@@ -5,7 +5,7 @@
 -- Dumped from database version 11.6
 -- Dumped by pg_dump version 11.6
 
--- Started on 2020-01-30 14:17:00
+-- Started on 2020-01-30 17:17:43
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,7 +23,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 199 (class 1259 OID 16655)
+-- TOC entry 196 (class 1259 OID 16699)
 -- Name: admin; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -40,7 +40,7 @@ CREATE TABLE public.admin (
 ALTER TABLE public.admin OWNER TO postgres;
 
 --
--- TOC entry 198 (class 1259 OID 16653)
+-- TOC entry 197 (class 1259 OID 16705)
 -- Name: admin_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -57,7 +57,7 @@ ALTER TABLE public.admin_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2851 (class 0 OID 0)
--- Dependencies: 198
+-- Dependencies: 197
 -- Name: admin_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -65,7 +65,7 @@ ALTER SEQUENCE public.admin_id_seq OWNED BY public.admin.id;
 
 
 --
--- TOC entry 197 (class 1259 OID 16640)
+-- TOC entry 198 (class 1259 OID 16707)
 -- Name: employee; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -82,7 +82,7 @@ CREATE TABLE public.employee (
 ALTER TABLE public.employee OWNER TO postgres;
 
 --
--- TOC entry 196 (class 1259 OID 16638)
+-- TOC entry 199 (class 1259 OID 16713)
 -- Name: employee_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -99,7 +99,7 @@ ALTER TABLE public.employee_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 2852 (class 0 OID 0)
--- Dependencies: 196
+-- Dependencies: 199
 -- Name: employee_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -107,7 +107,7 @@ ALTER SEQUENCE public.employee_id_seq OWNED BY public.employee.id;
 
 
 --
--- TOC entry 201 (class 1259 OID 16685)
+-- TOC entry 200 (class 1259 OID 16715)
 -- Name: hours; Type: TABLE; Schema: public; Owner: postgres
 --
 
@@ -124,7 +124,7 @@ CREATE TABLE public.hours (
 ALTER TABLE public.hours OWNER TO postgres;
 
 --
--- TOC entry 200 (class 1259 OID 16683)
+-- TOC entry 201 (class 1259 OID 16720)
 -- Name: hours_employeeid_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
@@ -141,7 +141,7 @@ ALTER TABLE public.hours_employeeid_seq OWNER TO postgres;
 
 --
 -- TOC entry 2853 (class 0 OID 0)
--- Dependencies: 200
+-- Dependencies: 201
 -- Name: hours_employeeid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
 
@@ -149,7 +149,7 @@ ALTER SEQUENCE public.hours_employeeid_seq OWNED BY public.hours.employeeid;
 
 
 --
--- TOC entry 2700 (class 2604 OID 16658)
+-- TOC entry 2699 (class 2604 OID 16722)
 -- Name: admin id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -157,7 +157,7 @@ ALTER TABLE ONLY public.admin ALTER COLUMN id SET DEFAULT nextval('public.admin_
 
 
 --
--- TOC entry 2699 (class 2604 OID 16643)
+-- TOC entry 2700 (class 2604 OID 16723)
 -- Name: employee id; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -165,7 +165,7 @@ ALTER TABLE ONLY public.employee ALTER COLUMN id SET DEFAULT nextval('public.emp
 
 
 --
--- TOC entry 2703 (class 2604 OID 16690)
+-- TOC entry 2703 (class 2604 OID 16724)
 -- Name: hours employeeid; Type: DEFAULT; Schema: public; Owner: postgres
 --
 
@@ -173,8 +173,8 @@ ALTER TABLE ONLY public.hours ALTER COLUMN employeeid SET DEFAULT nextval('publi
 
 
 --
--- TOC entry 2843 (class 0 OID 16655)
--- Dependencies: 199
+-- TOC entry 2840 (class 0 OID 16699)
+-- Dependencies: 196
 -- Data for Name: admin; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -182,8 +182,8 @@ INSERT INTO public.admin (id, name, surname, email, password, phone) VALUES (1, 
 
 
 --
--- TOC entry 2841 (class 0 OID 16640)
--- Dependencies: 197
+-- TOC entry 2842 (class 0 OID 16707)
+-- Dependencies: 198
 -- Data for Name: employee; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
@@ -193,19 +193,19 @@ INSERT INTO public.employee (id, name, surname, email, password, phone) VALUES (
 
 
 --
--- TOC entry 2845 (class 0 OID 16685)
--- Dependencies: 201
+-- TOC entry 2844 (class 0 OID 16715)
+-- Dependencies: 200
 -- Data for Name: hours; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.hours (recdate, checkin, checkout, employeeid, month, year) VALUES ('2020-01-30', '2020-01-30 13:06:28.796', NULL, 1, 1, 2020);
-INSERT INTO public.hours (recdate, checkin, checkout, employeeid, month, year) VALUES ('2020-01-30', '2020-01-30 13:06:35.641', NULL, 2, 1, 2020);
-INSERT INTO public.hours (recdate, checkin, checkout, employeeid, month, year) VALUES ('2020-01-30', '2020-01-30 13:06:42.64', NULL, 4, 1, 2020);
+INSERT INTO public.hours (recdate, checkin, checkout, employeeid, month, year) VALUES ('2020-01-30', '2020-01-30 13:06:35.641', '2020-01-30 17:02:24.973659', 2, 1, 2020);
+INSERT INTO public.hours (recdate, checkin, checkout, employeeid, month, year) VALUES ('2020-01-30', '2020-01-30 13:06:28.796', '2020-01-30 17:02:36.780383', 1, 1, 2020);
+INSERT INTO public.hours (recdate, checkin, checkout, employeeid, month, year) VALUES ('2020-01-30', '2020-01-30 17:02:04.808564', '2020-01-30 17:02:42.807215', 4, 1, 2020);
 
 
 --
 -- TOC entry 2854 (class 0 OID 0)
--- Dependencies: 198
+-- Dependencies: 197
 -- Name: admin_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -214,7 +214,7 @@ SELECT pg_catalog.setval('public.admin_id_seq', 1, true);
 
 --
 -- TOC entry 2855 (class 0 OID 0)
--- Dependencies: 196
+-- Dependencies: 199
 -- Name: employee_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -223,7 +223,7 @@ SELECT pg_catalog.setval('public.employee_id_seq', 4, true);
 
 --
 -- TOC entry 2856 (class 0 OID 0)
--- Dependencies: 200
+-- Dependencies: 201
 -- Name: hours_employeeid_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
@@ -231,7 +231,7 @@ SELECT pg_catalog.setval('public.hours_employeeid_seq', 1, false);
 
 
 --
--- TOC entry 2711 (class 2606 OID 16665)
+-- TOC entry 2705 (class 2606 OID 16726)
 -- Name: admin admin_email_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -240,7 +240,7 @@ ALTER TABLE ONLY public.admin
 
 
 --
--- TOC entry 2713 (class 2606 OID 16667)
+-- TOC entry 2707 (class 2606 OID 16728)
 -- Name: admin admin_phone_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -249,7 +249,7 @@ ALTER TABLE ONLY public.admin
 
 
 --
--- TOC entry 2715 (class 2606 OID 16663)
+-- TOC entry 2709 (class 2606 OID 16730)
 -- Name: admin admin_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -258,7 +258,7 @@ ALTER TABLE ONLY public.admin
 
 
 --
--- TOC entry 2705 (class 2606 OID 16650)
+-- TOC entry 2711 (class 2606 OID 16732)
 -- Name: employee employee_email_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -267,7 +267,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 2707 (class 2606 OID 16652)
+-- TOC entry 2713 (class 2606 OID 16734)
 -- Name: employee employee_phone_key; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -276,7 +276,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 2709 (class 2606 OID 16648)
+-- TOC entry 2715 (class 2606 OID 16736)
 -- Name: employee employee_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -285,7 +285,7 @@ ALTER TABLE ONLY public.employee
 
 
 --
--- TOC entry 2717 (class 2606 OID 16692)
+-- TOC entry 2717 (class 2606 OID 16738)
 -- Name: hours hours_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -294,7 +294,7 @@ ALTER TABLE ONLY public.hours
 
 
 --
--- TOC entry 2718 (class 2606 OID 16693)
+-- TOC entry 2718 (class 2606 OID 16739)
 -- Name: hours hours_employeeid_fkey; Type: FK CONSTRAINT; Schema: public; Owner: postgres
 --
 
@@ -302,7 +302,7 @@ ALTER TABLE ONLY public.hours
     ADD CONSTRAINT hours_employeeid_fkey FOREIGN KEY (employeeid) REFERENCES public.employee(id);
 
 
--- Completed on 2020-01-30 14:17:01
+-- Completed on 2020-01-30 17:17:43
 
 --
 -- PostgreSQL database dump complete
