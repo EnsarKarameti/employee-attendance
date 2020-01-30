@@ -5,6 +5,7 @@ import com.ensar.EmployeeAttendance.repository.EmployeeRepository;
 import com.ensar.EmployeeAttendance.repository.HoursRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.List;
@@ -57,6 +58,11 @@ public class DefaultEmployeeService implements EmployeeService {
 
     @Override
     public HashMap<String, Object> getHoursPerMonth(Login login, Integer month, Integer year) {
+        if(month.equals(0))
+            month = LocalDate.now().getMonthValue();
+        if(year.equals(0))
+            year = LocalDate.now().getYear();
+
         Employee employee = this.login(login);
         if (employee != null) {
             List<Hours> hours = hoursRepository.findAllByMonthAndYearAndIdEmployeeid(month, year, employee.getId());
@@ -71,6 +77,8 @@ public class DefaultEmployeeService implements EmployeeService {
         }
         return null;
     }
+
+
 
     private Double getTotalHoursWorked(List<Hours> hours) {
         Double total = 0.0;

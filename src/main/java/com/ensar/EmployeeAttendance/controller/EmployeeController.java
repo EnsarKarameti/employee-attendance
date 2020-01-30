@@ -24,7 +24,7 @@ public class EmployeeController {
     }
 
     @PostMapping("/employee/hours/month")
-    public HashMap getAllHoursPerMonth(@RequestBody Login login, @RequestParam Integer month, @RequestParam Integer year) {
+    public HashMap getAllHoursPerMonth(@RequestBody Login login, @RequestParam(defaultValue="0") Integer month, @RequestParam(defaultValue="0") Integer year) {
         return employeeService.getHoursPerMonth(login, month, year);
     }
 
