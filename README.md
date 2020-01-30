@@ -1,4 +1,4 @@
-#EMPLOYEE ATTENDANCE
+# EMPLOYEE ATTENDANCE
 
 The main purpose of this service is to store employee data
 about their working hours in a company.
@@ -7,7 +7,7 @@ The employee can use the app in that way such he can sign up
 to the system, login, check-in and check-out, and view the hours
 worked.
 
-###Tools
+### Tools
 
 You will need:
 1. Maven as the building tool
@@ -15,7 +15,7 @@ You will need:
 3. PostgreSQL
 4. IDE
 
-###Getting started
+### Getting started
 1. Clone the project from here:
 ```https://github.com/EnsarKarameti/employee-attendance```
 2. Configure database:
@@ -27,10 +27,10 @@ You will need:
 run the application.
 
 
-###Endpoints
+### Endpoints
 
 
-#####Admin endpoints
+##### Admin endpoints
 * URL: ```http://localhost:8080/admin/allemployees``` METHOD = POST
   Needs json body for login. Response is all employees and their hours worked
     
@@ -42,7 +42,7 @@ run the application.
                                            Needs json body for sign up.
     Response is the new registered admin
     
-#####Employee endpoints
+##### Employee endpoints
 
 * URL: ```http://localhost:8080/employee/signup``` METHOD = POST Needs json body for sign up.
 Response is the new registered employee.
